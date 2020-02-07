@@ -241,7 +241,7 @@ func (a *OKWSAgent) work() {
 
 	defer a.Stop()
 
-	ticker := time.NewTicker(29 * time.Second)
+	ticker := time.NewTicker(25 * time.Second)
 	defer ticker.Stop()
 
 	for {
