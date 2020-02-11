@@ -47,7 +47,6 @@ func (a *OKWSAgent) Start(config *Config) error {
 	c, _, err := websocket.DefaultDialer.Dial(a.baseUrl, nil)
 
 	if err != nil {
-		log.Fatalf("dial:%+v", err)
 		return err
 	} else {
 		if config.IsPrint {
@@ -241,7 +240,7 @@ func (a *OKWSAgent) work() {
 
 	defer a.Stop()
 
-	ticker := time.NewTicker(25 * time.Second)
+	ticker := time.NewTicker(29 * time.Second)
 	defer ticker.Stop()
 
 	for {
